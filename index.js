@@ -2,7 +2,7 @@
 const filmList = document.querySelector('#films');
 
 // Fetch the movie data
-fetch("http://localhost:4000/films")
+fetch("http://localhost:4001/films")
   .then(function (response) {
     return response.json();
   })
@@ -28,7 +28,7 @@ fetch("http://localhost:4000/films")
           <h1><b>${movie.title}</b></h1>
           <p>Runtime: ${movie.runtime}</p>
           <p>Showtime: ${movie.showtime}</p>
-          <p>Available Tickets: <span class="available-tickets">${movie.capacity - movie.tickets_sold}</span></p>3
+          <p>Available Tickets: <span class="available-tickets">${movie.capacity - movie.tickets_sold}</span></p>
           <button class="buy-ticket">Buy Ticket</button>
         </div>
       `;
